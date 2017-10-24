@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{282ff089-62eb-4e7f-9340-74e3ab2bd95f}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>PySudoku.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|VisualStudio|AIND</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".udacity-pa\projects.py" />
+    <Compile Include="objects\GameResources.py" />
+    <Compile Include="objects\SudokuSquare.py" />
+    <Compile Include="objects\__init__.py" />
+    <Compile Include="PySudoku.py" />
+    <Compile Include="solution.py" />
+    <Compile Include="tests\test_solution.py" />
+    <Compile Include="tests\__init__.py" />
+    <Compile Include="visualize.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="images\sudoku-board-bare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".udacity-pa" />
+    <Folder Include="images" />
+    <Folder Include="objects" />
+    <Folder Include="tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|AIND" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
