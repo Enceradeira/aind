@@ -7,4 +7,6 @@ sudoku-result-[0-9]*.json
 
 *.pyproj.user
 .vs
+.idea
+.cache
 
