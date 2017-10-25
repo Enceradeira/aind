@@ -18,30 +18,30 @@ class GameState:
 
     MAX_ROW_INDEX = get_max_index(lambda x: x[1], INDICES)
 
-    PLAYER_A = 'A'
+    PLAYER_MAX = 'MAX'
 
-    PLAYER_B = 'B'
+    PLAYSER_MIN = 'MIN'
 
     def __init__(self):
         self._board = GameState.INITIAL_BOARD
-        self._player_to_move = GameState.PLAYER_A
-        self._player_A_position = None
-        self._player_B_position = None
+        self._player_to_move = GameState.PLAYER_MAX
+        self._player_max_position = None
+        self._player_min_position = None
         return
 
     def _set_new_turn(self, move):
-        if self._player_to_move == GameState.PLAYER_A:
-            self._player_to_move = GameState.PLAYER_B
-            self._player_A_position = move
+        if self._player_to_move == GameState.PLAYER_MAX:
+            self._player_to_move = GameState.PLAYSER_MIN
+            self._player_max_position = move
         else:
-            self._player_to_move = GameState.PLAYER_A
-            self._player_B_position = move
+            self._player_to_move = GameState.PLAYER_MAX
+            self._player_min_position = move
 
     def _get_current_position(self):
-        if self._player_to_move == GameState.PLAYER_A:
-            return self._player_A_position
+        if self._player_to_move == GameState.PLAYER_MAX:
+            return self._player_max_position
         else:
-            return self._player_B_position
+            return self._player_min_position
 
     def _get_cell_state(self, coordinate):
         return self._board[coordinate[1]][coordinate[0]]
